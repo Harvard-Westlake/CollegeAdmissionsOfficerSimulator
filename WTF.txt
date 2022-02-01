@@ -1,7 +1,13 @@
 WTF!!!:
 Do you choose a new school every new game? 
+ANSWER: Yes
 How are school stats changes from students determined for each student and their extracurriculars, maybe the dude is a bad athlete???
+ANSWER: each extracurricular can boost a students value for each stat, but most of them may be randomly generated, possibly shown somewhere as well
 How do school stats work? Are they based on a 0-100 scale?
+ANSWER: each school has a target level of stats that the player wants to match as closely as possible, they can be on whatever scale you want i guess
 How much should events affect the school scores?
+ANSWER: they should roughly change the relevant stats (up to about 3 different ones) by up to about 15%-25%
 What is a meter? (Line 32, 55)
+ANSWER: the 'meter' refers to the bar showing each stat
 Does the game instantly end when the stats are lower than the quota, or does it have to consistently be lower for X amount of student decisions? How long does it have to be lower? Is it all of the stats or just one?
+ANSWER: the game ends when at least 3 stats are outside of an acceptable range of the quota (within 20%)
