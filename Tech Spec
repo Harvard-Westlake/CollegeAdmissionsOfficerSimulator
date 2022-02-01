@@ -1,0 +1,76 @@
+L Game
+Tech Spec:
+class Application()
+  Variables
+    String Name
+    String Image (link to image)
+    String Gender
+    String Race
+    String annualIncome
+    Double gpa
+    int Age
+    boolean hasLegacy
+    boolean isFirstGeneration
+    boolean requiresFinancialAid
+    boolean isAthelete
+    String preferredMajor 
+    String[] extracurriculars
+    String Essay
+    Boolean isEarlyDecision
+    Enum decision (accepted, deferred, waitlist, rejected)
+  Functions
+    Accept() //adds to meters that they have (isAthlete adds to athlete meter, etc.) while adjusting the other meters just removing from the meter(4.00=100, then if application gpa is lower than current average, subtract from prestige meter; if financial aid wealth decreases etc.)
+    Reject() //removes from meters that they don’t have (isAthlete is False, removes  from athlete meter), if legacy then remove from legacy meter, etc.
+    Defer() //puts into applications for regular decision
+    Waitlist() //changes the meters how they work normally but at a smaller scale
+class School ()
+  Variables
+    String name
+    Boolean isQuotaSatisfied
+    Int currentNumOfStudents
+    Int targetNumOfStudents
+    Int numFinancialAidStudents 
+    Int studentDecisionAmountFromQuotaUnsatisfied //how many students have had a decision made since our quota’s been unsatisfied. If this number goes past a few (Maybe like 5?) game ends.
+    Application[] deferred
+    Current School Characteristics(based on scale from 0-100 integers)
+      schoolLegacy 
+      schoolWealth
+      schoolDiversity
+      schoolSports
+      schoolGPA
+    Required School Characteristics (the Quotas)
+      requiredSchoolLegacy 
+      requiredSchoolWealth
+      requiredSchoolDiversity
+      requiredSchoolSports
+      requiredSchoolGPA
+  Functions
+    endGame()
+    triggerEvent()
+Class schoolDatabases ()
+  Variables
+    School [] schools
+Class event()
+  Variables
+    String description
+    String choiceADesc
+    String choiceBDesc
+    Int meterChange
+    Enum rightChoice(A, B)
+  Functions
+    makeChoice() - checks if your choice is the rightChoice, and adds to all your meters meterChange if it is (Caps at 100), and subtracts to all your meters meterChange if it isn’t (Bottom limit at 0)
+
+______   					    ______
+|          |						    |	   |
+|          |				  ____		    |	   |
+|          |                                      |       |		    |	   |
+|          |                                ___|       |___	    |	   |
+|          |                               |___         ___|	    |	   |
+|          |                                      |       |		    |	   |
+|          |                                      |___ |		    |	   |
+|          |_________				    |	   |_________
+|                            |				    |		         |
+|______________|				    |______________|
+
+
+≠ W

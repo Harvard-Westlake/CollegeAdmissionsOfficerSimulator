@@ -1,0 +1,7 @@
+WTF!!!:
+Do you choose a new school every new game? 
+How are school stats changes from students determined for each student and their extracurriculars, maybe the dude is a bad athlete???
+How do school stats work? Are they based on a 0-100 scale?
+How much should events affect the school scores?
+What is a meter? (Line 32, 55)
+Does the game instantly end when the stats are lower than the quota, or does it have to consistently be lower for X amount of student decisions? How long does it have to be lower? Is it all of the stats or just one?
