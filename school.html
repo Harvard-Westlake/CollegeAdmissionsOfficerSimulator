@@ -16,10 +16,14 @@
     currentCharacteristics : {
     //values of characteristics range from 1-100
     legacy:1,
-    wealth:1,
-    diversity:1,
-    sports:1,
-    gpa:1,
+    wealth:2,
+    diversity:3,
+    sports:4,
+    gpa:5,
+
+    displayCurrents:function(){
+      return "cLeg:"+this.legacy+" cWeal:"+this.wealth+" cDiv:"+this.diversity+"cSpor:"+this.sports+" cGPA:"+this.gpa;
+    }
     },
 
     targetCharacteristics : {
@@ -36,7 +40,9 @@
     },
 
     testDisplayVals : function(){
-      console.log("name: "+this.name+" current characteristics: "+(this.targetCharacteristics.displayTargets())+"");
+      console.log("name: "+this.name);
+      console.log("target characteristics: "+(this.targetCharacteristics.displayTargets())+"");
+      console.log("current characteristics: "+this.currentCharacteristics.displayCurrents()+"");
     }
   }
 </script>
