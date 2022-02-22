@@ -20,10 +20,15 @@
     diversity:3,
     sports:4,
     gpa:5,
-
+    //helper function for the overall test function
     displayCurrents:function(){
       return "cLeg:"+this.legacy+" cWeal:"+this.wealth+" cDiv:"+this.diversity+"cSpor:"+this.sports+" cGPA:"+this.gpa;
+    },
+    //should take in array of 5 ordered ints to replace the current characteristics
+    changeCurrents:function(newVals[]){
+      
     }
+
     },
 
     targetCharacteristics : {
@@ -34,16 +39,20 @@
     targetSports:93,
     targetGPA:94,
 
+    //helper function for the overall test function
     displayTargets:function(){
       return "tLeg:"+this.targetLegacy+" tWeal:"+this.targetWealth+" tDiv:"+this.targetDiversity+" tSpor:"+this.targetSports+" tGPA:"+this.targetGPA;
       }
     },
 
+    //test function to display the values of the variables
     testDisplayVals : function(){
       console.log("name: "+this.name);
       console.log("target characteristics: "+(this.targetCharacteristics.displayTargets())+"");
       console.log("current characteristics: "+this.currentCharacteristics.displayCurrents()+"");
     }
+
+
   }
 </script>
 </html>
