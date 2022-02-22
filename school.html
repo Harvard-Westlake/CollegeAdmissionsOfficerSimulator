@@ -2,7 +2,7 @@
 <script>
   let SCHOOL = {
     //only value to be inputted to initialize the school, all other values will come from the college database
-    name="default",
+    name:"default",
 
     isQuotaSatisfied: true,
     currentNumOfStudents: 1,
@@ -24,19 +24,19 @@
 
     targetCharacteristics : {
     //values of characteristics range from 1-100
-    targetLegacy:100,
-    targetWealth:100,
-    targetDiversity:100,
-    targetSports:100,
-    targetGPA:100,
+    targetLegacy:90,
+    targetWealth:91,
+    targetDiversity:92,
+    targetSports:93,
+    targetGPA:94,
 
-    display:function(){
-      return "tLeg:"+targetLegacy+" tWeal:"+targetWealth+" tDiv:"+targetDiversity+" tSpor:"+targetSports+" tGPA:"+targetGPA;
+    displayTargets:function(){
+      return "tLeg:"+this.targetLegacy+" tWeal:"+this.targetWealth+" tDiv:"+this.targetDiversity+" tSpor:"+this.targetSports+" tGPA:"+this.targetGPA;
       }
     },
 
     testDisplayVals : function(){
-      console.log("name: "+name+" current characteristics: "targetCharacteristics.display()+"");
+      console.log("name: "+this.name+" current characteristics: "+(this.targetCharacteristics.displayTargets())+"");
     }
   }
 </script>
