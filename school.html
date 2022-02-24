@@ -24,9 +24,9 @@
     displayCurrents:function(){
       return "cLeg:"+this.legacy+" cWeal:"+this.wealth+" cDiv:"+this.diversity+"cSpor:"+this.sports+" cGPA:"+this.gpa;
     },
-    //should take in array of 5 ordered ints to replace the current characteristics
-    changeCurrents:function(newVals[]){
-      
+    //should take in 5 ordered ints to replace the current characteristics
+    changeCurrents:function(leg,weal,div,spo,newgpa){
+
     }
 
     },
@@ -44,13 +44,50 @@
       return "tLeg:"+this.targetLegacy+" tWeal:"+this.targetWealth+" tDiv:"+this.targetDiversity+" tSpor:"+this.targetSports+" tGPA:"+this.targetGPA;
       }
     },
+    //checks if at least 3 of the characteristics are (margin) away from target values
+    isWithinTargets : function(marginError) {
+      let numOutsideRange=0;
+      if(this.targetCharacteristics.targetLegacy-this.currentCharacteristics.legacy>marginError||this.targetCharacteristics.targetLegacy-this.currentCharacteristics.legacy<0-marginError)
+      {
+        numOutsideRange++;
+      }
+      if(this.targetCharacteristics.targetWealth-this.currentCharacteristics.wealth>marginError||this.targetCharacteristics.targetWealth-this.currentCharacteristics.wealth<0-marginError)
+      {
+        numOutsideRange++;
+      }
+      if(this.targetCharacteristics.targetDiversity-this.currentCharacteristics.diversity>marginError||this.targetCharacteristics.targetDiversity-this.currentCharacteristics.diversity<0-marginError)
+      {
+        numOutsideRange++;
+      }
+      if(this.targetCharacteristics.targetSports-this.currentCharacteristics.sports>marginError||this.targetCharacteristics.targetSports-this.currentCharacteristics.sports<0-marginError)
+      {
+        numOutsideRange++;
+      }
+      if(this.targetCharacteristics.targetGPAthis.currentCharacteristics.gpa>marginError||this.targetCharacteristics.targetGPA-this.currentCharacteristics.gpa<0-marginError)
+      {
+        numOutsideRange++;
+      }
+      if(numOutsideRange>=3) {
+      return false;
+    }
+      else
+      {
+      return true;
+    }
+  },
+
+    //not to be implemented quite yet
+    endGame : function(){},
+    triggerEvent : function(){},
 
     //test function to display the values of the variables
     testDisplayVals : function(){
       console.log("name: "+this.name);
       console.log("target characteristics: "+(this.targetCharacteristics.displayTargets())+"");
       console.log("current characteristics: "+this.currentCharacteristics.displayCurrents()+"");
+      //console.log("is within targets: "+this.isWithinTargets(20))
     }
+
 
 
   }
