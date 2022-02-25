@@ -10,7 +10,7 @@ let Ussf={
       age:18,
       hasLegacy:true,
       isFirstGeneration:false,
-      requiresFinancialAid:false,
+      requiresFinancialAid:true,
       isAthlete:true,
       preferredMajor:"computer science",
       extracurriculars:["tuba","volunteers for Habitat for Humanity","scoops ice cream at Baskin Robbins"],
@@ -299,6 +299,9 @@ let Ussf={
         if(stud.isAthlete){
           coll.schoolSports++;
         }
+        if(stud.requiresFinancialAid){
+          coll.schoolWealth++;
+        }
         coll.schoolDiversity+=Ussf.college.computeDiversity(stud);
         coll.schoolGPA+=stud.gpa;
       } else{
@@ -327,6 +330,9 @@ let Ussf={
     },
     calculateDiversity:function(coll){
       return(coll.schoolDiversity/coll.numOfStudents*100);
+    },
+    calculateWealth:function(coll){
+      return(coll.schoolWealth/coll.numOfStudents*100);
     }
   }
 }
@@ -339,5 +345,7 @@ Ussf.college.accept(Ussf.student.jane,Ussf.college.Princeton);
 console.log(Ussf.college.calculateGPA(Ussf.college.Princeton));
 console.log(Ussf.college.calculateLegacy(Ussf.college.Princeton));
 console.log(Ussf.college.calculateSports(Ussf.college.Princeton));
+console.log(Ussf.college.Princeton.numOfStudents);
 console.log(Ussf.college.calculateDiversity(Ussf.college.Princeton));
+console.log(Ussf.college.calculateWealth(Ussf.college.Princeton));
 console.log(Ussf.college.Princeton.students);
