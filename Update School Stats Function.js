@@ -333,9 +333,28 @@ let Ussf={
     },
     calculateWealth:function(coll){
       return(coll.schoolWealth/coll.numOfStudents*100);
+    },
+    getCollegeStats:function(coll){
+      return(["School Wealth: "+coll.schoolWealth,"Required School Wealth: "+coll.requiredSchoolWealth,"School Diversity: "+coll.schoolDiversity,"Required School Diversity: "+coll.requiredSchoolDiversity,"School Sports: "+coll.schoolSports,"Required School Sports: "+coll.requiredSchoolSports,"School Legacy: "+coll.schoolLegacy,"Required School Legacy: "+coll.requiredSchoolLegacy,"School GPA: "+coll.schoolGPA,"Required School GPA: "+coll.requiredSchoolGPA,students,numStudents]);
+    },
+    hasMetWealthQuota:function(coll){
+      return(calculateWealth(coll)>=coll.requiredSchoolWealth);
+    },
+    hasMetDiversityQuota:function(coll){
+      return(calculateDiversity(coll)>=coll.requiredSchoolDiversity);
+    },
+    hasMetSportsQuota:function(coll){
+      return(calculateSports(coll)>=coll.requiredSchoolSports);
+    },
+    hasMetGPAQuota:function(coll){
+      return(calculateGPA(coll)>=coll.requiredSchoolGPA);
+    },
+    hasMetLegacyQuota:function(coll){
+      return(calculateLegacy(coll)>=coll.requiredSchoolLegacy);
     }
   }
 }
+// TESTS
 Ussf.college.accept(Ussf.student.bob,Ussf.college.Princeton);
 console.log(Ussf.college.calculateGPA(Ussf.college.Princeton));
 console.log(Ussf.college.calculateLegacy(Ussf.college.Princeton));
