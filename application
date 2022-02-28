@@ -1,6 +1,7 @@
 <html>
 <script>
   class Application{
+    //these are the variables given from the tech spec
     name = "";
     image = "";
     gender = "";
@@ -17,9 +18,90 @@
     essay = "";
     isEarlyDecision = false;
     decision = "";
+
+    //constructor should not take anything in but should generate the proper values for most of the variables
+    // I use lots of generative functions so it looks neater and is easier to edit numbers/ranges/odds
     constructor()
     {
-      
+
+    }
+
+    //generative functions that give the variables their values
+
+    //note: reads from the "names" file in "databases" folder, selects one at random
+    generateName(){
+
+    }
+
+    //note: reads from the "faces" file in "databases" folder, selects one at random
+    generateImage(){
+
+    }
+
+    //chooses at random from "male," "female," and "other" with the respective weighted average
+    generateGender(){
+      maleWeight = 0.40;
+      femaleWeight = 0.40;
+      otherWeight = 0.20;
+      total = maleWeight+femaleWeight+otherWeight;
+      //num = Math.random()*total;
+      //if (num<maleWeight) {return "male";}
+      //if(num<maleWeight+femaleWeight) {return "female";}
+      //return "other";
+
+    }
+
+    //chooses at random from "American Indian or Alaska Native," "Asian," "Black or African American," "Native Hawaiian or Pacific Islander," "White or Caucasian," or "other"
+    generateRace(){
+
+    }
+
+    //returns a random value within the min and max
+    //should also set requiresFinancialAid if above a certain threshold, or possinly that might go within the constructor
+    generateAnnualIncome(min,max){
+
+    }
+
+    //returns random value from 1-4 (unweighted only)
+    generateGPA(){
+
+    }
+
+    //for now, age will be random from 17-19, though this can be changed if you want something else
+    generateAge(){
+
+    }
+
+    //randomly chooses if hasLegacy is true with 0<=odds<=1
+    generateLegacy(odds){
+
+    }
+
+    //randomly chooses if isFirstGeneration is true with 0<=odds<=1
+    //lol funny naming conventions
+    generateGeneration(odds){
+
+    }
+
+    //randomly chooses if isAthlete is true with 0<=odds<=1
+    generateAthlete(odds){
+
+    }
+
+    //reads from list of majors in "database" folder, chooses one at random
+    generateMajor(){
+
+    }
+
+    //reads from list of extracurriculars in "databases", chooses (num) of them at random
+    //note: should choose without replacement, and since it gets stored as a single string, use '%' to separate different ones
+    generateExtracurriculars(num){
+
+    }
+
+    //reads one of the essays in the "essays" folder in the "databases"
+    generateEssay(){
+
     }
   }
 </script>
