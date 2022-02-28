@@ -1,0 +1,26 @@
+<html>
+<script>
+  class Application{
+    name = "";
+    image = "";
+    gender = "";
+    race = "";
+    annualIncome = 0;
+    gpa = 0;
+    age = 0;
+    hasLegacy = false;
+    requiresFinancialAid = false;
+    isFirstGeneration = false;
+    isAthlete = false;
+    preferredMajor = "";
+    extracurriculars = "";
+    essay = "";
+    isEarlyDecision = false;
+    decision = "";
+    constructor()
+    {
+      
+    }
+  }
+</script>
+</html>
