@@ -44,15 +44,27 @@
       femaleWeight = 0.40;
       otherWeight = 0.20;
       total = maleWeight+femaleWeight+otherWeight;
-      //num = Math.random()*total;
-      //if (num<maleWeight) {return "male";}
-      //if(num<maleWeight+femaleWeight) {return "female";}
-      //return "other";
+      choice = Math.random()*total;
+      if (choice<maleWeight) {return "male";}
+      if(choice<maleWeight+femaleWeight) {return "female";}
+      return "other";
 
     }
 
     //chooses at random from "American Indian or Alaska Native," "Asian," "Black or African American," "Native Hawaiian or Pacific Islander," "White or Caucasian," or "other"
     generateRace(){
+      aIndianWeight = 0.013;
+      asianWeight = 0.059;
+      blackWeight = 0.134;
+      pIslanderWeight = 0.002;
+      whiteWeight = 0.763;
+      total = aIndianWeight+asianWeight+blackWeight+pIslanderWeight+whiteWeight;
+      choice = Math.random()*total;
+      if(choice<aIndianWeight) {return "American Indian/Alaska Native";}
+      if(choice<aIndianWeight+asianWeight) {return "Asian";}
+      if(choice<aIndianWeight+asianWeight+blackWeight) {return "Black/African American";}
+      if(choice<aIndianWeight+asianWeight+blackWeight+pIslanderWeight) {return "Native Hawaiian/Pacific Islander";}
+      return "White/Caucasian";
 
     }
 
