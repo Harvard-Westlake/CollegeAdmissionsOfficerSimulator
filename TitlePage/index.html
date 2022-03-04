@@ -2,24 +2,59 @@
 <head>
   <body>
     <div id="message">
+      <img id="bg" src="background.png" width="1700" height="900">
+      <img id="startButton" src="beginButton.png" width="500" height="250">
 
+
+      <div id="under" style="left: 500px; top: 485px; position: absolute">
+        <canvas id="buttonCanvas" width="1366" height="768"></canvas>
+         </div>
+      <div id="top" style="left: 500px; top: 485px; position: absolute">
+            <canvas id="TitlePageCanvas1" width="1366" height="768"></canvas>
+          </div>
+
+
+
+    </div>
+<head>
+  </html>
+<!--
+OLD HTML CODE
 <font face="Arial">
 
-
-
+//
+<body onload="setObjectVisibility()">
+  <img id="collegeSelect" src="collegeSelectionBox.png" alt="selectBox" width="800" height= "800" >
       <img id="book" src="book.png" alt="TitleBook" width="800" height= "800">
-      <img id="beginButton" src="beginButton.png" alt="beginButton" width="500">
-    <canvas id="TitlePageCanvas" width="1280" height="1024"></canvas>
+      <img id="beginButton" src="beginButton.png" alt="beginButton" width="500" onclick="beginButtonClicked();">
       <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
     </div>
   </body>
   <script>
 
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
+
   var img = document.getElementById("book");
   var img = document.getElementById("beginButton");
-  ctx.drawImage(img);
+
+  function setObjectVisibility(){
+  document.getElementById("collegeSelect").style.visibility = "hidden";
+
+  }
+
+  function beginButtonClicked() {
+      console.log("Button Clicked");
+      document.getElementById("book").style.visibility = "hidden";
+    document.getElementById("beginButton").style.visibility = "hidden";
+    document.getElementById("collegeSelect").style.visibility = "visible";
+    displaySelectCollegePage();
+  }
+
+  function displaySelectCollegePage(){
+
+  }
   </script>
-<script src="TitlePageCanvas.js"></script>
-</html>
+<script src="TitlePageCanvas.js"></script> -->
