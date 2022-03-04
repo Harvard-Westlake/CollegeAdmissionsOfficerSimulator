@@ -1,25 +1,29 @@
 <html>
 <head>
+  <style>
+    body
+    {
+      background-image: url('https://i.pinimg.com/originals/1e/4a/a3/1e4aa323114471fdef8a3fa07da7c730.jpg');
+    }
+  </style>
+</head>
   <body>
-    <div id="message">
-
-<font face="Arial">
-
-
-
-      <img id="book" src="book.png" alt="TitleBook" width="800" height= "800">
-      <img id="beginButton" src="beginButton.png" alt="beginButton" width="500">
-    <canvas id="TitlePageCanvas" width="1280" height="1024"></canvas>
-      <link rel="stylesheet" type="text/css" href="style.css">
-    </div>
+  <canvas id="canvas" width="1280" height="1024"></canvas>
   </body>
   <script>
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  ctx.font = "30px Arial";
+  ctx.fillText("You won! Congratulations!", 200, 200);
+  ctx.fillText("Now, click the button below to go play again!", 200, 250);
 
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("book");
-  var img = document.getElementById("beginButton");
-  ctx.drawImage(img);
+  ctx.fillStyle = "#6666ff";
+  ctx.fillRect(200, 285, 100, 50);
+  ctx.lineWidth = 3;
+  ctx.stroke();
+
+  ctx.fillStyle = "#000000";
+
+  ctx.fillText("Play!", 215, 320);
   </script>
-<script src="TitlePageCanvas.js"></script>
 </html>
