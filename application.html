@@ -76,38 +76,44 @@
     //returns a random value within the min and max
     //should also set requiresFinancialAid if above a certain threshold, or possinly that might go within the constructor
     generateAnnualIncome(min,max){
-
+      income = Math.random()*(max-min)+min;
+      return income;
     }
 
     //returns random value from 1-4 (unweighted only)
     generateGPA(){
-
+      gpa = Math.random()*4+1;
+      return gpa;
     }
 
     //for now, age will be random from 17-19, though this can be changed if you want something else
     generateAge(){
-
+      age = Math.random()*3+17;
+      return age;
     }
 
     //randomly chooses if hasLegacy is true with 0<=odds<=1
     generateLegacy(odds){
-
+      rand = Math.random();
+      return odds>rand;
     }
 
     //randomly chooses if isFirstGeneration is true with 0<=odds<=1
     //lol funny naming conventions
     generateGeneration(odds){
-
+      rand = Math.random();
+      return odds>rand;
     }
 
     //randomly chooses if isAthlete is true with 0<=odds<=1
     generateAthlete(odds){
-
+      rand = Math.random();
+      return odds>rand;
     }
 
     //reads from list of majors in "database" folder, chooses one at random
     generateMajor(){
-
+      //again, involves file reading, see 'generateName()'
     }
 
     //reads from list of extracurriculars in "databases", chooses (num) of them at random
