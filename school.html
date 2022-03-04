@@ -1,6 +1,7 @@
 <html>
 <script>
   let STUDENT={
+    // example students for testing
     bob:{
       name:"bob",
       img:"link",
@@ -37,6 +38,7 @@
     }
   }
   let COLLEGES={
+    // CHANGE ALL GPA QUOTAS TO 0 to 4.0 scale, or change the way the calculateGPA function works
     PRINCETON:{
       requiredSchoolLegacy:60,
       requiredSchoolWealth:80,
@@ -44,7 +46,6 @@
       requiredSchoolSports:70,
       requiredSchoolGPA:80
     },
-    // CHANGE ALL GPA QUOTAS TO 0 to 4.0 scale
     HARVARD:{
       requiredSchoolLegacy:60,
       requiredSchoolWealth:80,
@@ -189,7 +190,14 @@
       schoolWealth:,
       schoolDiversity:,
       schoolSports:,
-      schoolGPA:
+      schoolGPA:,
+      importCharacteristics:function(quotas){
+        this.schoolLegacy=quotas[0];
+        this.schoolWealth=quotas[1];
+        this.schoolDiversity=quotas[2];
+        this.schoolSports=quotas[3];
+        this.schoolGPA=quotas[4];
+      }
     },
     students:[],
     accepted:[],
