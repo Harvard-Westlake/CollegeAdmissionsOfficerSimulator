@@ -1,5 +1,6 @@
 <html>
-<script>
+  <script>
+    //yes, you can pretty much just write this like a java class and it still works in javascript
   class Application {
     //these are the variables given from the tech spec
     name = "";
@@ -23,14 +24,18 @@
     // I use lots of generative functions so it looks neater and is easier to edit numbers/ranges/odds
     constructor()
     {
-
+      //call all of the generative functions in here
     }
 
     //generative functions that give the variables their values
 
     //note: reads from the "names" file in "databases" folder, selects one at random
     generateName(){
-
+       //goddammit why is file reading so bad
+       //every time i try to read from a file the live server throws a hissy fit
+       //probably something to do with reading from files stored on computer vs stored on the server itself
+       //the code got very messed up and I had to revert several commits because everything started to break
+       //for the generative functions which require this, check out https://developer.mozilla.org/en-US/docs/Web/API/FileReader it probably has something that i'm just missing
     }
 
     //note: reads from the "faces" file in "databases" folder, selects one at random
