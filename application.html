@@ -1,0 +1,138 @@
+<html>
+  <script>
+    //yes, you can pretty much just write this like a java class and it still works in javascript
+  class Application {
+    //these are the variables given from the tech spec
+    name = "";
+    image = "";
+    gender = "";
+    race = "";
+    annualIncome = 0;
+    gpa = 0;
+    age = 0;
+    hasLegacy = false;
+    requiresFinancialAid = false;
+    isFirstGeneration = false;
+    isAthlete = false;
+    preferredMajor = "";
+    extracurriculars = "";
+    essay = "";
+    isEarlyDecision = false;
+    decision = "";
+
+    //constructor should not take anything in but should generate the proper values for most of the variables
+    // I use lots of generative functions so it looks neater and is easier to edit numbers/ranges/odds
+    constructor()
+    {
+      //call all of the generative functions in here
+    }
+
+    //generative functions that give the variables their values
+
+    //note: reads from the "names" file in "databases" folder, selects one at random
+    generateName(){
+       //goddammit why is file reading so bad
+       //every time i try to read from a file the live server throws a hissy fit
+       //probably something to do with reading from files stored on computer vs stored on the server itself
+       //the code got very messed up and I had to revert several commits because everything started to break
+       //for the generative functions which require this, check out https://developer.mozilla.org/en-US/docs/Web/API/FileReader it probably has something that i'm just missing
+    }
+
+    //note: reads from the "faces" file in "databases" folder, selects one at random
+    generateImage(){
+
+    }
+
+    //chooses at random from "male," "female," and "other" with the respective weighted average
+    generateGender(){
+      maleWeight = 0.40;
+      femaleWeight = 0.40;
+      otherWeight = 0.20;
+      total = maleWeight+femaleWeight+otherWeight;
+      choice = Math.random()*total;
+      if (choice<maleWeight) {return "male";}
+      if(choice<maleWeight+femaleWeight) {return "female";}
+      return "other";
+
+    }
+
+    //chooses at random from "American Indian or Alaska Native," "Asian," "Black or African American," "Native Hawaiian or Pacific Islander," "White or Caucasian," or "other"
+    generateRace(){
+      aIndianWeight = 0.013;
+      asianWeight = 0.059;
+      blackWeight = 0.134;
+      pIslanderWeight = 0.002;
+      whiteWeight = 0.763;
+      total = aIndianWeight+asianWeight+blackWeight+pIslanderWeight+whiteWeight;
+      choice = Math.random()*total;
+      if(choice<aIndianWeight) {return "American Indian/Alaska Native";}
+      if(choice<aIndianWeight+asianWeight) {return "Asian";}
+      if(choice<aIndianWeight+asianWeight+blackWeight) {return "Black/African American";}
+      if(choice<aIndianWeight+asianWeight+blackWeight+pIslanderWeight) {return "Native Hawaiian/Pacific Islander";}
+      return "White/Caucasian";
+
+    }
+
+    //returns a random value within the min and max
+    //should also set requiresFinancialAid if above a certain threshold, or possinly that might go within the constructor
+    generateAnnualIncome(min,max){
+      income = Math.random()*(max-min)+min;
+      return income;
+    }
+
+    //returns random value from 1-4 (unweighted only)
+    generateGPA(){
+      gpa = Math.random()*4+1;
+      return gpa;
+    }
+
+    //for now, age will be random from 17-19, though this can be changed if you want something else
+    generateAge(){
+      age = Math.random()*3+17;
+      return age;
+    }
+
+    //randomly chooses if hasLegacy is true with 0<=odds<=1
+    generateLegacy(odds){
+      rand = Math.random();
+      return odds>rand;
+    }
+
+    //randomly chooses if isFirstGeneration is true with 0<=odds<=1
+    //lol funny naming conventions
+    generateGeneration(odds){
+      rand = Math.random();
+      return odds>rand;
+    }
+
+    //randomly chooses if isAthlete is true with 0<=odds<=1
+    generateAthlete(odds){
+      rand = Math.random();
+      return odds>rand;
+    }
+
+    //reads from list of majors in "database" folder, chooses one at random
+    generateMajor(){
+      //again, involves file reading, see 'generateName()'
+    }
+
+    //reads from list of extracurriculars in "databases", chooses (num) of them at random
+    //note: should choose without replacement, and since it gets stored as a single string, use '%' to separate different ones
+    generateExtracurriculars(num){
+
+    }
+
+    //reads one of the essays in the "essays" folder in the "databases"
+    generateEssay(){
+
+    }
+
+
+    //this is to set the decision status,, should take in 'accepted,' 'rejected,' etc.
+    //takes role of accept() waitlist() etc. functions from tech spec
+    setDecision(result){
+      this.decision = result;
+    }
+  }
+  <\script>
+  <\html>
