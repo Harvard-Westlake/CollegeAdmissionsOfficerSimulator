@@ -326,3 +326,10 @@ let STUDENT={
       //console.log("is within targets: "+this.isWithinTargets(20))
     }
   }
+
+
+updateQuotas(student){
+  if (legacy){
+    var legacyQuota = document.getElementById("legacyQuo");
+  }
+}
