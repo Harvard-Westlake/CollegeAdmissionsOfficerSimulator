@@ -1,23 +1,9 @@
-var canvas = document.getElementById("game");
-var ctx = canvas.getContext("2d");
-var pixelData;
-
-
-
-function draw(){
-ctx.clearRect(0,0, canvas.width, canvas.height);
-var myImg = document.getElementById("start");
-ctx.drawImage(myImg,0,0,1200,800);
-window.requestAnimationFrame(draw);
-};
-
-draw();
-
-
 class CollisionChecker {
   constructor(canvasElement) {
-    let clicked = false;
-      this._test = true;
+  this.canvas = gameCanvasElement;
+
+      // set this to true to test everything
+      this._test = false;
       if (this._test) {
         this._test_logMouseMovement();
       }
@@ -28,10 +14,18 @@ class CollisionChecker {
       }
   }
 
+  // ==============================================
+  // checkPixelType  ==============================
+  // inputs
+      // pixelX  - x pixel coordinate to check
+      // pixelY  - y pixel coordinate to check
+  // outputs
+    // any type of (typeOfGameElement)
+  // ==============================================
   checkPixelType(pixelX, pixelY) {
 
     // How did I figure this out?  Stolen from: https://bfy.tw/SbUU
-    pixelData = canvas.getContext('2d').getImageData(pixelX, pixelY, 1, 1).data;
+    var pixelData = this.canvas.getContext('2d').getImageData(pixelX, pixelY, 1, 1).data;
 
     // If (this.test) is set to TRUE (in the constructor), log details
     if (this._test) {
@@ -42,29 +36,29 @@ class CollisionChecker {
     if (pixelData) {
       // Check if wall
       if (this.isButton(pixelData)) {
-        return this.typeOfGameElement.button;
+        return this.typeOfGameElement.wall;
       }
     }
   }
 
   // Checks if its a wall (assumed RGB values are 255,255,255)
   isButton(pixelData) {
-    if (pixelData[0] == '156' && pixelData[1] == '176' && pixelData[2] == '123' && pixelData[3] == '255') {
-      // console.log('clicking button');
-      // this.clicked = true;
+    if (pixelData[0] == '156' && pixelData[1] == '176' && pixelData[2] == '125' && pixelData[3] == '255') {
+      console.log('buttonclick');
+      return true;
     }
-    // this.clicked = false;
+    return false;
   }
 
 
-
+  // This is only used for testing, can be deleted...
+  // This draws a gradient and shows the RGB values at any given pixel
+  // stolen from https://tinyurl.com/ytmnvtct
   _test_logMouseMovement() {
     let self = this;
-    canvas.addEventListener("click", e => {
+    this.canvas.addEventListener('click', e => {
       self.checkPixelType(e.offsetX, e.offsetY);
     });
-
-
   }
 
   _test_logTestData(pixelData) {
@@ -73,19 +67,10 @@ class CollisionChecker {
       console.log('G: ' + pixelData[1]);
       console.log('B: ' + pixelData[2]);
       console.log('A: ' + pixelData[3]);
-      if (pixelData[0] == '156' && pixelData[1] == '176' && pixelData[2] == '123' && pixelData[3] == '255') {
-        console.log("buttonclicked");
-        return true;
-
-
-      }
-      return false;
-
     }
-
   }
 
 }
 
-
+let gameCanvasElement = document.getElementById('game');
 const cc = new CollisionChecker(this.canvas);
