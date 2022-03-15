@@ -169,6 +169,8 @@ let STUDENT={
     getQuotas:function(college){
       return([college.requiredSchoolLegacy,college.requiredSchoolWealth,college.requiredSchoolDiversity,college.requiredSchoolSports,college.requiredSchoolGPA]);
     }
+
+
   }
 
 
