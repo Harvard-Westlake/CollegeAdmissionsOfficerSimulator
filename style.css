@@ -2,9 +2,36 @@
 
 canvas{
   border: 2px dotted black;
+  vertical-align: middle;
+  margin: 10;
 }
 
 #instruction{
-  background-color: yellow;
+  background-color: #8FBC8F;
+  padding: 30;
+  margin: 20;
+  font-family: monospace, "Monaco";
+  border-radius: 15px;
+  text-align: center;
 
+}
+
+.quotas{
+  display: inline-block;
+  vertical-align: middle;
+  font-family: monospace, "Monaco";
+  border-radius: 15px;
+  background: #8FBC8F;
+  height: 800;
+  padding-left: 10;
+  width: 180;
+
+}
+
+.quota{
+  padding-bottom: 120;
+}
+
+.title{
+  padding-left: 43;
 }
