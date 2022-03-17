@@ -1,7 +1,7 @@
 class Student {
 
 
-  constructor(name, gpa, legacy, requiresAid, donor, race, isAthlete){
+  constructor(name, gpa, legacy, requiresAid, donor, race, isAthlete, image){
     this.name= name;
     this.gpa= gpa;
     this.legacy= legacy;
@@ -10,6 +10,7 @@ class Student {
     this.isAthlete= isAthlete;
     this.accept = document.getElementById("accept");
     this.reject = document.getElementById("reject");
+    this.image=image;
 
   }
 
