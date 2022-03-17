@@ -6,7 +6,16 @@
   <p id="instruction"> <b>Instructions:</b> Welcome to the Admissions Game! Think the college admissions process is corrupt, you came to the right place! This is your chance to shine and admit students based on their profile. Don't be too harsh or the same might happen to you! Press the "start game" button to begin. To admit a student press the check button.
     To waitlist a student click the circle. IF YOU DARE TO REJECT then hit the red button. But be ware sometimes being fair is not going to make you win the game. Your indicators must display a balance of academic prestige, diversity, wealth and athletic ability<p>
 <div class = "screen">
-  <canvas id="game" width=1200px height=800px style: "float:left"></canvas>
+  <img src="student1.jpeg" alt = "1st student">
+  <img src="student2.jpeg" display: "none" alt="2nd student"> 
+  <img src="student3.jpeg" display: "none" alt="3rd student">
+  <img src="student4.jpeg" display: "none" alt="4th student">
+  <img src="student5.jpeg" display: "none" alt="5th student">
+
+  <div class= "buttons">
+    <button id="accept"> AcceptButton </button>
+    <button id="reject"> RejectButton </button>
+  </div>
 
   <div class = "quotas" >
     <div class = "title">
@@ -23,10 +32,7 @@
   <img id="start" src="beg.jpeg" style="display: none"; stylealt="screen">
 </div>
 
-<div class= "buttons">
-  <button id="accept"> AcceptButton </button>
-  <button id="reject"> RejectButton </button>
-</div>
+
 
   <script src="main.js"></script>
 <scirpt src = "Student.js"></script>

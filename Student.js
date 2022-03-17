@@ -14,6 +14,10 @@ class Student {
 
   }
 
+  function getImage(){
+    return (iamge);
+  }
+
 function updateQuotas(){
   if (this.legacy){
     var legacyQuota = document.getElementById("legacyQuo");
@@ -55,6 +59,14 @@ function updateQuotas(){
   }
 
 }
+
+function show(image) {
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById(image)
+                    .style.display = "block";
+
+    }
 
 
 

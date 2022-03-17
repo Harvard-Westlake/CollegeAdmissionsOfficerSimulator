@@ -3,6 +3,7 @@ var ctx = canvas.getContext("2d");
 var pixelData;
 
 
+
 Student student1 = new Student ("Rufinus Sadaf", 3.7, false, false, false, "french", true, "Rufinius.jpeg");
 Student student2= new Student ("John Doe", "4.0", false, true, false, "white", false, "Doe.jpeg");
 Student student3= new Student ("Sleeping Beauty", "3.2", true, false, true, "asian", false, "Sleeping.jpeg");
@@ -15,14 +16,14 @@ function nextPerson(currentPerson)
   var counter=1;
   var accept= document.getElementById("accept");
   var decline= document.getElementById("decline");
-  accept.addEventListener("click",function(){currentPerson.change(array[counter]); currentPerson.updateQuotas()});
-  decline.addEventListner("click", function(){currentPerson.change(array[counter]);});
+  accept.addEventListener("click",function(){currentPerson.show(array[counter].getImage()); currentPerson.updateQuotas()});
+  decline.addEventListner("click", function(){currentPerson.show(array[counter].getImage());});
   counter++;
 
 }
 
 
-
+/**
 function draw(){
 ctx.clearRect(0,0, canvas.width, canvas.height);
 var myImg = document.getElementById("start");
@@ -103,8 +104,8 @@ class CollisionChecker {
     }
 
   }
+*/
 
-}
+//}
 
-
-const cc = new CollisionChecker(this.canvas);
+//const cc = new CollisionChecker(this.canvas);
