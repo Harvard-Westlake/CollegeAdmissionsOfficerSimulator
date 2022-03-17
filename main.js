@@ -3,6 +3,25 @@ var ctx = canvas.getContext("2d");
 var pixelData;
 
 
+Student student1 = new Student ("Rufinus Sadaf", 3.7, false, false, false, "french", true);
+Student student2= new Student ("John Doe", "4.0", false, true, false, "white", false);
+Student student3= new Student ("Sleeping Beauty", "3.2", true, false, true, "asian", false);
+Student student4= new Student ("Tom Cruz", 3.5, false, false, true, "white", true);
+Student student5= new Student ("Dylan Smith", 3.9, true, false, false, "black", false);
+var array = [student1, student2, student3, student4, student5];
+
+function nextPerson(img,currentPerson)
+{
+  var counter=1;
+  var accept= document.getElementById("accept");
+  var decline= document.getElementById("decline"); 
+  accept.addEventListener("click",function(){currentPerson.change(array[counter],img); currentPerson.updateQuotas()});
+  decline.addEventListner("click", function(){currentPerson.change(array[counter], img);});
+  counter++;
+
+}
+
+
 
 function draw(){
 ctx.clearRect(0,0, canvas.width, canvas.height);

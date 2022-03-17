@@ -1,6 +1,6 @@
 L Game
 Tech Spec:
-class Application()
+class Student())
   Variables
     String Name
     String Image (link to image)
@@ -13,7 +13,7 @@ class Application()
     boolean isFirstGeneration
     boolean requiresFinancialAid
     boolean isAthelete
-    String preferredMajor 
+    String preferredMajor
     String[] extracurriculars
     String Essay
     Boolean isEarlyDecision
@@ -29,17 +29,17 @@ class School ()
     Boolean isQuotaSatisfied
     Int currentNumOfStudents
     Int targetNumOfStudents
-    Int numFinancialAidStudents 
+    Int numFinancialAidStudents
     Int studentDecisionAmountFromQuotaUnsatisfied //how many students have had a decision made since our quota’s been unsatisfied. If this number goes past a few (Maybe like 5?) game ends.
     Application[] deferred
     Current School Characteristics(based on scale from 0-100 integers)
-      schoolLegacy 
+      schoolLegacy
       schoolWealth
       schoolDiversity
       schoolSports
       schoolGPA
     Required School Characteristics (the Quotas)
-      requiredSchoolLegacy 
+      requiredSchoolLegacy
       requiredSchoolWealth
       requiredSchoolDiversity
       requiredSchoolSports
