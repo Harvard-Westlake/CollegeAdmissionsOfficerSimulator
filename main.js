@@ -9,20 +9,19 @@ ctx.clearRect(0,0, canvas.width, canvas.height);
 var myImg = document.getElementById("start");
 ctx.drawImage(myImg,0,0,1200,800);
 window.requestAnimationFrame(draw);
+var clicked = document.addEventListener('click', switchPage("example"));
 };
-
 draw();
 
 
-function switchPage(id){
-  if(onButton()){//check jo's method // document.addEventListener('keydown', switchPage(id));
-    ctx.clearRect(0,0, canvas.width, canvas.height);
-    var myImg = document.getElementById(id);
-    ctx.drawImage(myImg,0,0,1200,800);
-    window.requestAnimationFrame(draw);
-  }
 
-}
+function switchPage(id){
+  if(checkPixelType(event.clientX, event.clientY)){//check jo's method // document.addEventListener('keydown', switchPage(id));
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    var img = document.getElementById(id);
+    ctx.drawImage(img,0,0,1200,800);
+    window.requestAnimationFrame(draw);
+  }}
 class CollisionChecker {
   constructor(canvasElement) {
     let clicked = false;
@@ -58,6 +57,7 @@ class CollisionChecker {
 
   // Checks if its a wall (assumed RGB values are 255,255,255)
   isButton(pixelData) {
+    let isButton =
     if (pixelData[0] == '156' && pixelData[1] == '176' && pixelData[2] == '123' && pixelData[3] == '255') {
       // console.log('clicking button');
       // this.clicked = true;
