@@ -11,9 +11,10 @@ var array = [student1, student2, student3, student4, student5, student6];
 
 function nextPerson(currentPerson)
 {
+
   var accept= document.getElementById("accept");
   var decline= document.getElementById("decline");
-  accept.addEventListener("click",function(){currentPerson.show(array[counter].getImage()); currentPerson.updateQuotas(); console.log("hit")});
+  accept.addEventListener("click",function(){currentPerson.show(array[counter].getImage()); currentPerson.updateQuotas(); console.log("hit"); nextPerson(currentPerson)});
   decline.addEventListener("click", function(){currentPerson.show(array[counter].getImage())});
   counter++;
 
