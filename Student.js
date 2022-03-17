@@ -14,11 +14,11 @@ class Student {
 
   }
 
-  function getImage(){
-    return (iamge);
+ getImage(){
+    return (this.image);
   }
 
-function updateQuotas(){
+ updateQuotas(){
   if (this.legacy){
     var legacyQuota = document.getElementById("legacyQuo");
     let legInnerTxt = legacyQuota.innerText.split();//an array
@@ -60,11 +60,11 @@ function updateQuotas(){
 
 }
 
-function show(image) {
+show(image) {
             /* Access image by id and change
             the display property to block*/
-            document.getElementById(image)
-                    .style.display = "block";
+            let imgarr=image.split(".");
+            document.getElementById(imgarr[0]).style.display = "block";
 
     }
 

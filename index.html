@@ -3,18 +3,19 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-  <p id="instruction"> <b>Instructions:</b> Welcome to the Admissions Game! Think the college admissions process is corrupt, you came to the right place! This is your chance to shine and admit students based on their profile. Don't be too harsh or the same might happen to you! Press the "start game" button to begin. To admit a student press the check button.
-    To waitlist a student click the circle. IF YOU DARE TO REJECT then hit the red button. But be ware sometimes being fair is not going to make you win the game. Your indicators must display a balance of academic prestige, diversity, wealth and athletic ability<p>
+  <p id="instruction"> <b>Instructions:</b> Welcome to the Admissions Game! Think the college admissions process is corrupt, you came to the right place! This is your chance to shine and admit students based on their profile. Don't be too harsh or the same might happen to you!  To admit a student press the admit button.
+ IF YOU DARE TO REJECT then hit the reject button. But be ware sometimes being fair is not going to make you win the game. Your indicators must display a balance of academic prestige, diversity, wealth and athletic ability. THERE ARE SIX STUDENT, YOU CAN ONLY ADMIT 2!!!<p>
 <div class = "screen">
-  <img src="student1.jpeg" alt = "1st student">
-  <img src="student2.jpeg" display: "none" alt="2nd student"> 
-  <img src="student3.jpeg" display: "none" alt="3rd student">
-  <img src="student4.jpeg" display: "none" alt="4th student">
-  <img src="student5.jpeg" display: "none" alt="5th student">
+  <img id="student1" src="student1.jpeg" alt = "1st student">
+  <img id= "student2" src="student2.jpeg" style="display: none;" alt="2nd student">
+  <img id= "student3" src="student3.jpeg" style="display: none;"alt="3rd student">
+  <img id= "student4" src="student4.jpeg" style="display: none;" alt="4th student">
+  <img id = "student5" src="student5.jpeg" style="display: none;" alt="5th student">
+  <img id = "student6" src="student6.jpeg" style="display: none;" alt="6th student">
 
   <div class= "buttons">
     <button id="accept"> AcceptButton </button>
-    <button id="reject"> RejectButton </button>
+    <button id="decline"> RejectButton </button>
   </div>
 
   <div class = "quotas" >
@@ -28,15 +29,10 @@
     <h3 class = "quota" id = "wealthQuo">Wealth: _</h3>
   </div>
 </div>
-<div class="starting screen">
-  <img id="start" src="beg.jpeg" style="display: none"; stylealt="screen">
-</div>
 
 
-
+<script src = "Student.js"></script>
   <script src="main.js"></script>
-<scirpt src = "Student.js"></script>
-  <script src="School.js"></script>
 
 
 </html>

@@ -1,26 +1,34 @@
-var canvas = document.getElementById("game");
-var ctx = canvas.getContext("2d");
-var pixelData;
 
+var counter=1;
 
-
-Student student1 = new Student ("Rufinus Sadaf", 3.7, false, false, false, "french", true, "Rufinius.jpeg");
-Student student2= new Student ("John Doe", "4.0", false, true, false, "white", false, "Doe.jpeg");
-Student student3= new Student ("Sleeping Beauty", "3.2", true, false, true, "asian", false, "Sleeping.jpeg");
-Student student4= new Student ("Tom Cruz", 3.5, false, false, true, "white", true, "Cruz.jpeg");
-Student student5= new Student ("Dylan Smith", 3.9, true, false, false, "black", false, "Smith.jpeg");
-var array = [student1, student2, student3, student4, student5];
+let  student1 = new Student ("Rufinus Sadaf", 3.7, false, false, false, "white", true, "student1.jpeg");
+let student2= new Student ("Amdado Maxwell", 3.78, false, false, false, "black", true, "student2.jpeg");
+let student3= new Student ("Brandon McCormick", 3.56, true, false, true, "white", true, "student3.jpeg");
+let student4= new Student ("Eusbio Villegas", 3.85, false, false, false, "hispanic", true, "student4.jpeg");
+let student5= new Student ("FangFang Zhe", 3.68, true, false, false, "asian", false, "student5.jpeg");
+let student6 = new Student ("Stacey Daniel", 3.67, false, true, false, "white", true, "student6.jpeg");
+var array = [student1, student2, student3, student4, student5, student6];
 
 function nextPerson(currentPerson)
 {
-  var counter=1;
   var accept= document.getElementById("accept");
   var decline= document.getElementById("decline");
-  accept.addEventListener("click",function(){currentPerson.show(array[counter].getImage()); currentPerson.updateQuotas()});
-  decline.addEventListner("click", function(){currentPerson.show(array[counter].getImage());});
+  accept.addEventListener("click",function(){currentPerson.show(array[counter].getImage()); currentPerson.updateQuotas(); console.log("hit")});
+  decline.addEventListener("click", function(){currentPerson.show(array[counter].getImage())});
   counter++;
 
 }
+
+function win(){
+  if (legInnerHtml >= 2 && counter==6){
+    alert("you won");
+  }
+  else if (counter==6){
+    alert("you lose");
+  }
+}
+
+nextPerson(student1);
 
 
 /**
