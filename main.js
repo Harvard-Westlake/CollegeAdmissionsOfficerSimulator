@@ -1,15 +1,15 @@
 
 var counter=1;
 
-let  student1 = new Student ("Rufinus Sadaf", 3.7, false, false, false, "white", true, "student1.jpeg");
+let  student1 = new Student ("Rufinus Sadaf", 3.7, false, false, false, "white", true, "student1.jpeg"); // intializeing five students
 let student2= new Student ("Amdado Maxwell", 3.78, false, false, false, "black", true, "student2.jpeg");
 let student3= new Student ("Brandon McCormick", 3.56, true, false, true, "white", true, "student3.jpeg");
 let student4= new Student ("Eusbio Villegas", 3.85, false, false, false, "hispanic", true, "student4.jpeg");
 let student5= new Student ("FangFang Zhe", 3.68, true, false, false, "asian", false, "student5.jpeg");
 let student6 = new Student ("Stacey Daniel", 3.67, false, true, false, "white", true, "student6.jpeg");
-var array = [student1, student2, student3, student4, student5, student6];
+var array = [student1, student2, student3, student4, student5, student6]; // arrat of six students
 
-function nextPerson(currentPerson)
+function nextPerson(currentPerson) // gets the picture of the next person and then updates quotas based on accpet or reject
 {
 
   var accept= document.getElementById("accept");
@@ -20,7 +20,7 @@ function nextPerson(currentPerson)
 
 }
 
-function win(){
+function win(){ // alters user if they won
   if (legInnerHtml >= 2 && counter==6){
     alert("you won");
   }
@@ -29,7 +29,7 @@ function win(){
   }
 }
 
-nextPerson(student1);
+nextPerson(student1); // calls the function 
 
 
 /**

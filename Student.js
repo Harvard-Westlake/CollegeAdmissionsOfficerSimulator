@@ -1,21 +1,21 @@
 class Student {
 
 
-  constructor(name, gpa, legacy, requiresAid, donor, race, isAthlete, image){
+  constructor(name, gpa, legacy, requiresAid, donor, race, isAthlete, image){ // initalizes a student
     this.name= name;
     this.gpa= gpa;
     this.legacy= legacy;
     this. requiresAid= requiresAid;
     this.race=race;
     this.isAthlete= isAthlete;
-    this.accept = document.getElementById("accept");
+    this.accept = document.getElementById("accept"); // gets the buttons on index
     this.reject = document.getElementById("reject");
-    this.image=image;
+    this.image=image; // this should be just the name of the image
 
   }
 
  getImage(){
-    return (this.image);
+    return (this.image); // getter
   }
 
  updateQuotas(){
@@ -60,7 +60,7 @@ class Student {
 
 }
 
-show(image) {
+show(image) {  // displays an image that is not displayed when called 
             /* Access image by id and change
             the display property to block*/
             let imgarr=image.split(".");
