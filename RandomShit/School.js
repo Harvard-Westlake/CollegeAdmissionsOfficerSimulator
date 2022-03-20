@@ -1,6 +1,4 @@
-<html>
-<script>
-  let STUDENT={
+let STUDENT={
     // example students for testing
     bob:{
       name:"bob",
@@ -37,6 +35,9 @@
       isEarlyDecision:true
     }
   }
+
+
+
   let COLLEGES={
     // CHANGE ALL GPA QUOTAS TO 0 to 4.0 scale, or change the way the calculateGPA function works
     PRINCETON:{
@@ -168,7 +169,13 @@
     getQuotas:function(college){
       return([college.requiredSchoolLegacy,college.requiredSchoolWealth,college.requiredSchoolDiversity,college.requiredSchoolSports,college.requiredSchoolGPA]);
     }
+
+
   }
+
+
+
+
   let SCHOOL={
     name:="",
     characteristics:{
@@ -319,5 +326,5 @@
       //console.log("is within targets: "+this.isWithinTargets(20))
     }
   }
-</script>
-</html>
+
+//ADD THIS IN STUDENT
