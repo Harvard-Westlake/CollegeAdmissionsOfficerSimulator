@@ -16,6 +16,74 @@ canvas{
 
 }
 
+#accept1{
+  position: absolute;top:40%;
+
+}
+
+#decline1{
+    position: absolute;top:50%;
+
+}
+
+#decline2{
+  position:absolute; top: 110%;
+  position:absolute; left: 55%;
+
+}
+
+#accept2{
+  position:absolute; top: 100%;
+  position:absolute; left: 55%;
+}
+
+#decline3{
+  position:absolute; top: 165%;
+  position:absolute; left: 55%;
+
+}
+
+#accept3{
+  position:absolute; top: 155%;
+  position:absolute; left: 55%;
+}
+
+#decline4{
+  position:absolute; top: 230%;
+  position:absolute; left: 55%;
+
+}
+
+#accept4{
+  position:absolute; top: 220%;
+  position:absolute; left: 55%;
+}
+
+#decline5{
+  position:absolute; top: 300%;
+  position:absolute; left: 55%;
+
+}
+
+#accept5{
+  position:absolute; top: 290%;
+  position:absolute; left: 55%;
+}
+
+#decline6{
+  position:absolute; top: 370%;
+  position:absolute; left: 55%;
+
+}
+
+#accept6{
+  position:absolute; top: 360%;
+  position:absolute; left: 55%;
+}
+
+
+
+
 .quotas{
   display: inline-block;
   vertical-align: middle;

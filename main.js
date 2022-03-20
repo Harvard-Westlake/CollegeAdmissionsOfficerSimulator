@@ -1,35 +1,64 @@
 
-var counter=1;
-
 let  student1 = new Student ("Rufinus Sadaf", 3.7, false, false, false, "white", true, "student1.jpeg"); // intializeing five students
 let student2= new Student ("Amdado Maxwell", 3.78, false, false, false, "black", true, "student2.jpeg");
 let student3= new Student ("Brandon McCormick", 3.56, true, false, true, "white", true, "student3.jpeg");
 let student4= new Student ("Eusbio Villegas", 3.85, false, false, false, "hispanic", true, "student4.jpeg");
 let student5= new Student ("FangFang Zhe", 3.68, true, false, false, "asian", false, "student5.jpeg");
 let student6 = new Student ("Stacey Daniel", 3.67, false, true, false, "white", true, "student6.jpeg");
-var array = [student1, student2, student3, student4, student5, student6]; // arrat of six students
+var counter=0;
+var numclicked=0;
+  var accept1= document.getElementById("accept1");
+  var decline1= document.getElementById("decline1");
+  var accept2= document.getElementById("accept2");
+  var decline2= document.getElementById("decline2");
+  var accept3= document.getElementById("accept3");
+  var decline3= document.getElementById("decline3");
+  var accept4= document.getElementById("accept4");
+  var decline4= document.getElementById("decline4");
+  var accept5= document.getElementById("accept5");
+  var decline5= document.getElementById("decline5");
+  var accept6= document.getElementById("accept6");
+  var decline6= document.getElementById("decline6");
 
-function nextPerson(currentPerson) // gets the picture of the next person and then updates quotas based on accpet or reject
-{
-
-  var accept= document.getElementById("accept");
-  var decline= document.getElementById("decline");
-  accept.addEventListener("click",function(){currentPerson.show(array[counter].getImage()); currentPerson.updateQuotas(); console.log("hit"); nextPerson(currentPerson)});
-  decline.addEventListener("click", function(){currentPerson.show(array[counter].getImage())});
-  counter++;
-
-}
-
-function win(){ // alters user if they won
-  if (legInnerHtml >= 2 && counter==6){
-    alert("you won");
+  function updateLegacy(student){
+  if (student.getLegacy()==true){
+    counter++;
   }
-  else if (counter==6){
+  }
+
+  function updateClick(){
+    numclicked++;
+
+  }
+
+
+  accept1.addEventListener("click",function(){updateLegacy(student1); updateClick()});
+  decline1.addEventListener("click",function(){updateClick()});
+  accept2.addEventListener("click",function(){updateLegacy(student2); updateClick()});
+  decline2.addEventListener("click",function(){updateClick()});
+  accept3.addEventListener("click",function(){updateLegacy(student3); updateClick()});
+  decline3.addEventListener("click",function(){updateClick()});
+  accept4.addEventListener("click",function(){updateLegacy(student4); updateClick()});
+  decline4.addEventListener("click",function(){updateClick()});
+  accept5.addEventListener("click",function(){updateLegacy(student5); updateClick()});
+  decline5.addEventListener("click",function(){updateClick()});
+  accept6.addEventListener("click",function(){updateLegacy(student6);updateClick(); win()});
+  decline6.addEventListener("click",function(){updateClick(); win()});
+
+
+function win(){
+  if (numclicked==6 && counter==2){
+    alert("you win");
+  }
+  else if (numclicked==6){
     alert("you lose");
   }
+
+
 }
 
-nextPerson(student1); // calls the function 
+
+
 
 
 /**

@@ -18,6 +18,10 @@ class Student {
     return (this.image); // getter
   }
 
+  getLegacy(){
+     return (this.legacy); // getter
+   }
+
  updateQuotas(){
   if (this.legacy){
     var legacyQuota = document.getElementById("legacyQuo");
@@ -59,14 +63,16 @@ class Student {
   }
 
 }
-
-show(image) {  // displays an image that is not displayed when called 
+/**
+show(image, image2) {  // displays an image that is not displayed when called
             /* Access image by id and change
             the display property to block*/
-            let imgarr=image.split(".");
-            document.getElementById(imgarr[0]).style.display = "block";
+        //    let imgarr=image.split(".");
+          //  document.getElementById(imgarr[0]).style.display = "block";
+          //  let imagrr2 = image2.split(".");
+          //  document.getElementById(imagrr2[0].style.display="none");
 
-    }
+
 
 
 
