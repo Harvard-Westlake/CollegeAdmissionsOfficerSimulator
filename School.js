@@ -1,6 +1,4 @@
-<html>
-<script>
-  let STUDENT={
+let STUDENT={
     // example students for testing
     bob:{
       name:"bob",
@@ -37,6 +35,9 @@
       isEarlyDecision:true
     }
   }
+
+
+
   let COLLEGES={
     // CHANGE ALL GPA QUOTAS TO 0 to 4.0 scale, or change the way the calculateGPA function works
     PRINCETON:{
@@ -168,7 +169,13 @@
     getQuotas:function(college){
       return([college.requiredSchoolLegacy,college.requiredSchoolWealth,college.requiredSchoolDiversity,college.requiredSchoolSports,college.requiredSchoolGPA]);
     }
+
+
   }
+
+
+
+
   let SCHOOL={
     name:="",
     characteristics:{
@@ -319,5 +326,46 @@
       //console.log("is within targets: "+this.isWithinTargets(20))
     }
   }
-</script>
-</html>
+
+//ADD THIS IN STUDENT
+updateQuotas(){
+  if (this.legacy){
+    var legacyQuota = document.getElementById("legacyQuo");
+    let legInnerTxt = legacyQuota.innerText.split();//an array
+    legacyQuota.innerHTML += (legInnerTxt[1]+1);
+  }
+  //diversityQuo
+  if (this.race != "white"){
+    var diversityQuota = document.getElementById("diversityQuo");
+    let divInnerTxt = diversityQuota.innerText.split();//an array
+    diversityQuota.innerHTML += (divInnerTxt[1]+1);
+  }
+  //sportsqou
+  if (this.isAthlete){
+    var sportsQuota = document.getElementById("sportsQuo");
+    let sportsInnerTxt = sportsQuota.innerText.split();//an array
+    sportsQuota.innerHTML += (sportsInnerTxt[1]+1);
+  }
+
+
+  if(this.gpa >= 3.9){
+    var gpaQuota = document.getElementById("gpaQuo");
+    let gpaInnerTxt = gpaQuota.innerText.split();
+    gpaQuota.innerHTML += (gpaInnerTxt[1]+1);
+  }
+  //wealthQuo
+
+  if(this.donor){
+    var wealthQuota = document.getElementById("wealthQuo");
+    let wealthInnerTxt = wealthQuota.innerText.split();
+    wealthQuota.innerHTML += (wealthInnerTxt[1]+1);
+  }
+
+  if(this.requiresAid){
+    //if requores financial aid wealth goes down one
+    var wealthQuota = document.getElementById("wealthQuo");
+    let wealthInnerTxt = wealthQuota.innerText.split();
+    wealthQuota.innerHTML += (wealthInnerTxt[1]-1);
+  }
+
+}
